@@ -1,0 +1,561 @@
+
+:root {
+  --pink: #f5dce6;
+  --pink-dark: #d997b6;
+  --lavender: #d9c8ee;
+  --purple: #775487;
+  --deep-purple: #4d355e;
+  --cream: #fffaf6;
+  --text: #514052;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 8%;
+  background: rgba(255, 250, 246, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #eee1ed;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+}
+
+.nav-links a {
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--pink-dark);
+}
+
+.nav-flower {
+  font-size: 23px;
+}
+
+.hero {
+  min-height: 610px;
+  padding: 100px 10%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg,
+      rgba(255, 248, 250, 0.97) 0%,
+      rgba(255, 248, 250, 0.88) 45%,
+      rgba(255, 248, 250, 0.25) 100%),
+    url("1792171108526.jpg")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 550px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--purple);
+  margin-bottom: 16px;
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+.hero h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(48px, 7vw, 78px);
+  font-weight: 600;
+  color: var(--deep-purple);
+  margin-bottom: 22px;
+}
+
+.hero h1 span,
+h2 span {
+  color: #d77ca5;
+}
+
+.hero-text {
+  max-width: 420px;
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  background: var(--purple);
+  color: white;
+  padding: 13px 25px;
+  border-radius: 30px;
+  font-size: 13px;
+  box-shadow: 0 7px 20px #77548730;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background: var(--deep-purple);
+}
+
+.handwritten {
+  font-family: "Dancing Script", cursive;
+  font-size: 22px;
+  color: var(--purple);
+}
+
+.hero-content > .handwritten {
+  margin-top: 25px;
+}
+
+.hero-flowers {
+  position: absolute;
+  right: 7%;
+  bottom: 35px;
+  display: flex;
+  gap: 5px;
+  font-size: clamp(30px, 5vw, 65px);
+  filter: drop-shadow(0 5px 5px #8a678444);
+  animation: sway 4s ease-in-out infinite;
+}
+
+.floating {
+  position: absolute;
+  color: var(--purple);
+  animation: float 5s ease-in-out infinite;
+}
+
+.flower-one {
+  top: 20%;
+  right: 17%;
+  font-size: 35px;
+}
+
+.flower-two {
+  top: 40%;
+  right: 5%;
+  font-size: 30px;
+}
+
+.flower-three {
+  bottom: 18%;
+  left: 48%;
+  font-size: 28px;
+}
+
+.section {
+  padding: 85px 9%;
+  text-align: center;
+}
+
+.section h2,
+.surprise-section h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(38px, 5vw, 55px);
+  font-weight: 600;
+  color: var(--deep-purple);
+  margin-bottom: 12px;
+}
+
+.letter-section {
+  background:
+    radial-gradient(ellipse at 0% 0%, #e9d9f2 0%, transparent 40%),
+    var(--cream);
+}
+
+.letter-card {
+  max-width: 750px;
+  margin: 35px auto 0;
+  padding: 45px 55px;
+  background: #fff;
+  border: 1px solid #eee0eb;
+  border-radius: 5px;
+  box-shadow: 0 12px 35px #77548712;
+  text-align: left;
+  position: relative;
+}
+
+.letter-card p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.letter-greeting,
+.letter-ending {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.letter-decoration {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 35px;
+}
+
+.signature {
+  font-family: "Dancing Script", cursive;
+  font-size: 22px !important;
+}
+
+.signature span {
+  display: block;
+  font-size: 27px;
+  color: var(--purple);
+}
+
+.memories-section {
+  background: linear-gradient(180deg, #f8edf5, #fffaf6);
+}
+
+.section-description {
+  font-size: 14px;
+  margin: 0 auto 35px;
+  max-width: 500px;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1050px;
+  margin: 0 auto 30px;
+}
+
+.memory-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px #77548712;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.memory-card:hover {
+  transform: translateY(-7px) rotate(-1deg);
+}
+
+.memory-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.memory-info {
+  padding: 13px 7px 9px;
+}
+
+.memory-info h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  color: var(--purple);
+}
+
+.memory-info p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.memory-note {
+  margin-top: 35px;
+}
+
+.song-section {
+  background: var(--deep-purple);
+  color: white;
+  background-image: radial-gradient(
+    circle at 85% 20%, #8e6e9c 0%, transparent 35%
+  );
+}
+
+.song-section .eyebrow {
+  color: #e8c8ed;
+}
+
+.song-section h2 {
+  color: white;
+}
+
+.song-section .section-description {
+  color: #f1e5f2;
+}
+
+.song-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  text-align: left;
+  max-width: 480px;
+  margin: 35px auto 20px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #ffffff15;
+  border: 1px solid #ffffff25;
+}
+
+.song-icon {
+  font-size: 38px;
+}
+
+.song-details {
+  flex: 1;
+}
+
+.song-details h3 {
+  font-size: 15px;
+}
+
+.song-details p {
+  font-size: 12px;
+  color: #e9d9ee;
+}
+
+.music-button {
+  border: 1px solid #ffffff80;
+  border-radius: 30px;
+  padding: 9px 15px;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+}
+
+.music-button:hover {
+  background: #ffffff20;
+}
+
+.music-note {
+  font-family: "Dancing Script", cursive;
+  font-size: 22px;
+  color: #f2d8ed;
+}
+
+.surprise-section {
+  background:
+    radial-gradient(ellipse at 10% 90%, #e8d5f0 0%, transparent 40%),
+    radial-gradient(ellipse at 90% 10%, #f7dce8 0%, transparent 40%),
+    var(--cream);
+}
+
+.surprise-section > p:not(.eyebrow) {
+  max-width: 450px;
+  margin: 0 auto 25px;
+  font-size: 14px;
+}
+
+.surprise-flowers {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.gift-button {
+  margin-top: 10px;
+}
+
+.gift-message {
+  display: none;
+  max-width: 600px;
+  margin: 35px auto 0;
+  padding: 35px;
+  background: white;
+  border: 1px solid #ead9ed;
+  border-radius: 15px;
+  box-shadow: 0 10px 35px #77548718;
+  animation: appear 0.8s ease;
+}
+
+.gift-message.show {
+  display: block;
+}
+
+.gift-emoji {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.gift-message h3 {
+  font-family: "Dancing Script", cursive;
+  color: var(--purple);
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.gift-message p {
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+footer {
+  padding: 28px 15px;
+  text-align: center;
+  background: #f2e5f1;
+  font-size: 12px;
+}
+
+.footer-heart {
+  font-family: "Dancing Script", cursive;
+  color: var(--purple);
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(10deg);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 13px 5%;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .nav-flower {
+    display: none;
+  }
+
+  .hero {
+    min-height: 620px;
+    padding: 75px 7%;
+    align-items: flex-start;
+    background-position: 60% center;
+  }
+
+  .hero-content {
+    margin-top: 25px;
+  }
+
+  .hero-text {
+    max-width: 320px;
+  }
+
+  .hero-flowers {
+    right: 4%;
+    bottom: 25px;
+  }
+
+  .flower-three {
+    display: none;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .letter-card {
+    padding: 35px 25px;
+  }
+
+  .letter-decoration {
+    opacity: 0.5;
+  }
+
+  .memory-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .memory-card img {
+    height: 250px;
+  }
+
+  .song-card {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .song-icon {
+    font-size: 28px;
+  }
+
+  .music-button {
+    padding: 8px 10px;
+  }
+
+  .gift-message {
+    padding: 25px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
